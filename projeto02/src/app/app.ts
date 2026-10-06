@@ -20,7 +20,8 @@ export class App {
   nomeEscolhido: string = "";
   tamanhoFonteNum: number = 30;
   tamanhoFonteCSS: string = "";
-  
+  corFonte: string = 'black';
+  cores: string[] = ['pink','green','blue','black','red','yellow'];
 
   gerarNumeroAleatorio() {
     this.numero = Math.round(Math.random() * 100);
@@ -31,6 +32,10 @@ export class App {
     this.tamanhoFonteNum += 2;
     this.tamanhoFonteCSS = this.tamanhoFonteNum + 'px';
     }
-    
+  
+  mudarCorFonte() {
+    this.corFonte = this.cores[ Math.round( Math.random() * 10 / 2) ];
+      // número randomico de 0 a 5
+    }
 
 }

@@ -50,11 +50,11 @@ Título <br />
 }
 <br/>
     <div>
-    <button (click)="aumentarFonte()" >
-        Aumentar Fonte </button>
-    <h2 [ngStyle]="{'font-size': tamanhoFonteCSS}" >
-    teste do ngStyle
-    </h2>
+    <button (click)="aumentarFonte()">Aumentar Fonte</button>
+    <button (click)="mudarCorFonte()">Mudar Cor Fonte</button>
+        <h2 [style.font-size]=tamanhoFonteCSS [style.color]=corFonte>
+         teste do Style Binding em mais de uma propriedade
+        </h2>
 
     </div>
     
