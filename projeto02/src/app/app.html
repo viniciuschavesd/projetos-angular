@@ -1,0 +1,18 @@
+Título <br />
+<h1>{{texto}}</h1>
+<h2>{{'o nome deste projeto é ' + title() }}</h2>
+
+<br />
+<h3>Número aleatório entre 0 e 100 => {{numero}} </h3>
+<br />
+<button (click)="gerarNumeroAleatorio()"> Gerar Número Aleatório
+</button>
+
+<div>
+    <br />
+    Digite um valor para o número aleatório
+    <input [(ngModel)]="numero" type="number" />
+</div>
+
+
+<router-outlet />
