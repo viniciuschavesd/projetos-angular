@@ -1,0 +1,24 @@
+.bloco1 {
+  background-color: red;
+  color: greenyellow;
+  margin: 10px;
+  padding: 10px;
+}
+.bloco2 {
+  background-color: blue;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
+.bloco3 {
+  background-color: yellow;
+  color: darkblue;
+  margin: 10px;
+  padding: 10px;
+}
+.bloco4 {
+  background-color: pink;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+}

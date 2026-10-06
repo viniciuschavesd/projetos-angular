@@ -1,18 +1,76 @@
 Título <br />
-<h1>{{texto}}</h1>
-<h2>{{'o nome deste projeto é ' + title() }}</h2>
+    <h1>{{texto}}</h1>
+    <h2>{{'o nome deste projeto é ' + title() }}</h2>
 
-<br />
-<h3>Número aleatório entre 0 e 100 => {{numero}} </h3>
-<br />
-<button (click)="gerarNumeroAleatorio()"> Gerar Número Aleatório
+<br/>
+    <h3>Número aleatório entre 0 e 100 => {{numero}} </h3>
+<br/>
+    <button (click)="gerarNumeroAleatorio()"> Gerar Número Aleatório
 </button>
 
 <div>
-    <br />
+    <br/>
     Digite um valor para o número aleatório
     <input [(ngModel)]="numero" type="number" />
 </div>
 
+<!-- IF -->
+@if (numero > 50){
+    <h2> Número gerado é MAIOR que 50 !</h2>
+    }@else if (numero < 10) {
+    <h2> Número gerado é menor que 10 !</h2>
+    }@else {
+    <h2> Número gerado é MENOR que 50 !</h2>
+}
 
-<router-outlet />
+    <h3> Escolha um nome: </h3>
+    <select [(ngModel)]="nomeEscolhido">
+@for (opcao of vetNomes; track opcao){
+    <option> {{opcao}} </option>
+}
+    </select>
+
+<!-- SWITCH -->
+@switch (nomeEscolhido) {
+@case (vetNomes[0]) {
+    <div class="bloco1" > {{'Nome escolhido foi ' + vetNomes[0]}} </div>
+}
+@case (vetNomes[1]) {
+    <div class="bloco2" > {{'Nome escolhido foi ' + vetNomes[1]}} </div>
+}
+@case (vetNomes[2]) {
+    <div class="bloco3" > {{'Nome escolhido foi ' + vetNomes[2]}} </div>
+}
+@case (vetNomes[3]) {
+    <div class="bloco4" > {{'Nome escolhido foi ' + vetNomes[3]}} </div>
+}
+@default {
+    <div> ainda não escolheu </div>
+}
+}
+<br/>
+    <div>
+    <button (click)="aumentarFonte()" >
+        Aumentar Fonte </button>
+    <h2 [ngStyle]="{'font-size': tamanhoFonteCSS}" >
+    teste do ngStyle
+    </h2>
+
+    </div>
+    
+
+<!-- FOR -->
+@for (numeroExemplo of vetNumerosGerados ; track numeroExemplo){
+    <div>
+         Este foi o {{' '+($index+1) + '°. '}} numero gerado {{': '+ numeroExemplo }}
+    </div>
+    } @empty {
+    <h1> Não há itens na lista </h1>
+}
+
+
+
+
+
+
+    <router-outlet />
