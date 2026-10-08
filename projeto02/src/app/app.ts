@@ -1,11 +1,11 @@
-import { NgStyle } from '@angular/common';
+import { CommonModule, NgStyle } from '@angular/common';
 import { Component, signal} from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 
 @Component({
-  imports: [RouterOutlet, FormsModule, NgStyle],
+  imports: [RouterOutlet, FormsModule, CommonModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -37,5 +37,12 @@ export class App {
     this.corFonte = this.cores[ Math.round( Math.random() * 10 / 2) ];
       // número randomico de 0 a 5
     }
-
+  classesCSS() {
+    const valores = {
+    'cor-fundoA': true,
+    'cor-borda': true
+    };
+    return valores;
+    }
+      
 }

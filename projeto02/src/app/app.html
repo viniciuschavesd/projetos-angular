@@ -57,6 +57,16 @@ Título <br />
         </h2>
 
     </div>
+    <div>
+        <p [class.cor-fundo]="true">
+        Usando class binding - só permite uma classe CSS
+        </p>
+    </div>
+    <div>
+        <p [ngClass]="classesCSS()"> <!--Usando duas classes no ngClass-->
+            Usando ngClass com uma classe CSS
+        </p>
+    </div>
     
 
 <!-- FOR -->
@@ -67,9 +77,6 @@ Título <br />
     } @empty {
     <h1> Não há itens na lista </h1>
 }
-
-
-
 
 
 
