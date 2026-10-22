@@ -39,9 +39,8 @@ export class App {
     }
   classesCSS() {
     const valores = {
-    'cor-fundoA': true,
-    'cor-borda': true
-    };
+    'cor-fundoA cor-borda': true
+   };
     return valores;
     }
   
