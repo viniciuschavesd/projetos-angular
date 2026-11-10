@@ -1,0 +1,20 @@
+{
+    "carros": [
+        {
+            "id": 1,
+            "nome": "Ferrari",
+            "descricao": "Carro esportivo",
+            "preco": 3000000
+        },
+        {
+            "id": 2,
+            "nome": "Rolls-Royce",
+            "descricao": "Carro de luxo.",
+            "preco": 4500000
+        }
+    ],
+    "empresa": {
+        "id": 1,
+        "nome": "Auto Motors"
+    }
+}
