@@ -11,7 +11,12 @@
             "nome": "Rolls-Royce",
             "descricao": "Carro de luxo.",
             "preco": 4500000
-        }
+        },
+        {
+            "nome": "Fusca",
+            "descricao": "Carro clássico.",
+            "preco": 5000
+            }
     ],
     "empresa": {
         "id": 1,
